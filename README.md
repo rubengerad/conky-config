@@ -14,17 +14,25 @@ This conky configuration provides comprehensive monitoring for developers workin
 - **Process List**: Top 10 processes by CPU/memory usage
 
 ## Git Monitoring
-- Current repository name
+- Current repository name (from git working directory)
 - Active git branch
 - Repository status (clean/modified)
-- Last commit information
+- Last commit information (hash + message)
 - Number of unpushed commits
 
 ## MCP Monitoring
 - Active MCP servers count
+- GitHub MCP server processes
+- Playwright MCP server processes
 - Claude Desktop processes
-- OpenAI API processes  
-- LLM-related processes (ollama, llama, etc.)
-- Python MCP processes
+- LLM-related processes (ollama, llama, openai, anthropic)
+
+## Installation
+1. Install conky: `sudo apt install conky-all` (Ubuntu/Debian)
+2. Copy `conky.conf` to your home directory or desired location
+3. Run: `conky -c /path/to/conky.conf`
+
+## Usage
+The configuration automatically detects git repositories and MCP servers in the current working directory where conky is executed. For best results, run conky from your development project directory.
 
 ![conky-mem-monitor](https://github.com/user-attachments/assets/d0a14f51-8ca9-43da-a085-dbd201bc132b)
